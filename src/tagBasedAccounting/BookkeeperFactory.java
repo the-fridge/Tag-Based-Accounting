@@ -2,7 +2,7 @@ package tagBasedAccounting;
 
 public class BookkeeperFactory {
 
-  public static Bookkeeper bookkeeper(){
+  public static Bookkeeper bookkeeper(Memory memory){
     Bookkeeper bookkeeper = new BookkeeperSimple();
     return bookkeeper;
   }

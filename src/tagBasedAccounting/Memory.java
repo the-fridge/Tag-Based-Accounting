@@ -2,6 +2,6 @@ package tagBasedAccounting;
 
 public interface Memory {
 
-    void getData();
+  void getData();
 
 }

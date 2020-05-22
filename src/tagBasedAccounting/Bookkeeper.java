@@ -2,13 +2,18 @@ package tagBasedAccounting;
 
 public interface Bookkeeper {
 
-    void createTransaction();
-    void updateTransaction();
-    void deleteTransaction();
+  void createTransaction();
 
-    void createTag();
-    void updateTag();
-    void deleteTag();
-    void groupTag();
+  void updateTransaction();
+
+  void deleteTransaction();
+
+  void createTag();
+
+  void updateTag();
+
+  void deleteTag();
+
+  void groupTag();
 
 }

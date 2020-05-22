@@ -2,6 +2,6 @@ package tagBasedAccounting;
 
 public interface Analyzer {
 
-    void evaluate(String expression);
+  void evaluate(String expression);
 
 }

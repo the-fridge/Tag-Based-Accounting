@@ -27,3 +27,5 @@ hs_err_pid*
 .idea/vcs.xml
 .idea/modules.xml
 .idea/Tag-Based-Accounting.iml
+.idea/libraries/json_simple_1_1_1.xml
+.idea/uiDesigner.xml

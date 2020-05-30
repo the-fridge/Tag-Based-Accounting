@@ -20,8 +20,8 @@ class TagSimple implements Tag, JSONinfyable{
   private TagType tagType;
   private Date creationDate;
   private List<Transaction> transactions;
-  private List<Tag> tagLeaders;
-  private List<Tag> tagSubordinates;
+  private List<Tag> leaders;
+  private List<Tag> subordinates;
 
   @Override
   public JSONObject toJSONObject() {
@@ -32,8 +32,8 @@ class TagSimple implements Tag, JSONinfyable{
     object.put("tagType", tagType);
     object.put("creationDate", creationDate);
     object.put("transactions", transactions);
-    object.put("tagLeaders", tagLeaders);
-    object.put("tagSubordinates", tagSubordinates);
+    object.put("tagLeaders", leaders);
+    object.put("tagSubordinates", subordinates);
 
     return object;
   }

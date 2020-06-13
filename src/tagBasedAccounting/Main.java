@@ -10,9 +10,9 @@ public class Main {
     Bookkeeper bookkeeper;
     // Main should not have direct access to the memory
     {
-      Memory memory = MemoryFactory.memory();
-      analyzer = AnalyzerFactory.analyzer(memory);
-      bookkeeper = BookkeeperFactory.bookkeeper(memory);
+      Memory memory = Factory.memory();
+      analyzer = Factory.analyzer(memory);
+      bookkeeper = Factory.bookkeeper(memory);
     }
 
     Scanner scanner = new Scanner(System.in);

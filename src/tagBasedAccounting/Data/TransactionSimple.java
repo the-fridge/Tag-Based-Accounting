@@ -6,15 +6,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-public class TransactionFactory {
-
-  public static Transaction transaction(){
-    Transaction transaction = new TransactionSimple();
-    return transaction;
-  }
-
-}
-
 class TransactionSimple implements Transaction, JSONinfyable{
 
   private long id;

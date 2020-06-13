@@ -5,14 +5,6 @@ import org.json.simple.JSONObject;
 import java.util.Date;
 import java.util.List;
 
-public class TagFactory {
-
-  public static Tag tag(){
-    Tag tag = new TagSimple();
-    return tag;
-  }
-}
-
 class TagSimple implements Tag, JSONinfyable{
 
   private long id;

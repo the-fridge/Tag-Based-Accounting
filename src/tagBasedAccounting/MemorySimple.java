@@ -10,17 +10,8 @@ import tagBasedAccounting.Data.Transaction;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
-public class MemoryFactory {
-
-  public static Memory memory(){
-    Memory memory = new MemorySimple();
-    return memory;
-  }
-}
 
 class MemorySimple implements Memory{
 

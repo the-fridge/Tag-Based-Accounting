@@ -5,7 +5,7 @@ import org.json.simple.JSONObject;
 import java.util.Date;
 import java.util.List;
 
-class TagSimple implements Tag, JSONinfyable{
+class TagSimple implements Tag, JSONifyable {
 
   private long id;
   private String name;
@@ -28,5 +28,10 @@ class TagSimple implements Tag, JSONinfyable{
     object.put("tagSubordinates", subordinates);
 
     return object;
+  }
+
+  @Override
+  public JSONifyable asJSONifyable() {
+    return this;
   }
 }

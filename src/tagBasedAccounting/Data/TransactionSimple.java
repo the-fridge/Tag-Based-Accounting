@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-class TransactionSimple implements Transaction, JSONinfyable{
+class TransactionSimple implements Transaction, JSONifyable {
 
   private long id;
   private double amount;
@@ -33,5 +33,10 @@ class TransactionSimple implements Transaction, JSONinfyable{
     object.put("usage", usage);
 
     return object;
+  }
+
+  @Override
+  public JSONifyable asJSONifyable() {
+    return this;
   }
 }

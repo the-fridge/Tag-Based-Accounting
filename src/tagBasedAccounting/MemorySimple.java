@@ -2,7 +2,6 @@ package tagBasedAccounting;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import tagBasedAccounting.Data.JSONinfyable;
 import tagBasedAccounting.Data.Tag;
 import tagBasedAccounting.Data.TagType;
 import tagBasedAccounting.Data.Transaction;
@@ -26,17 +25,13 @@ class MemorySimple implements Memory{
     JSONArray tags = new JSONArray();
     for(TagType type : this.tags.keySet()){
       for(Tag tag : this.tags.get(type)){
-        if(tag instanceof JSONinfyable){
-          tags.add(((JSONinfyable) tag).toJSONObject());
-        }
+        tag.asJSONifyable().toJSONObject();
       }
     }
 
     JSONArray transactions = new JSONArray();
     for(Transaction transaction : this.transactions){
-      if(transaction instanceof JSONinfyable){
-        transactions.add(((JSONinfyable) transaction).toJSONObject());
-      }
+      transaction.asJSONifyable().toJSONObject();
     }
 
     JSONObject object = new JSONObject();

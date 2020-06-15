@@ -2,13 +2,13 @@ package tagBasedAccounting;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import tagBasedAccounting.Data.Tag;
 import tagBasedAccounting.Data.TagType;
 import tagBasedAccounting.Data.Transaction;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.List;
 import java.util.Map;
 
@@ -21,7 +21,27 @@ class MemorySimple implements Memory{
   private Map<TagType, List<Tag>> tags;
 
   private void loadData(){
-    
+
+    JSONObject object = new JSONObject();
+    File file = new File(dataLocation + dataFileName);
+    try(BufferedReader br = new BufferedReader(new FileReader(file))) {
+      String line;
+      String raw = "";
+      while ((line = br.readLine()) != null){
+        raw += line;
+      }
+      JSONParser parser = new JSONParser();
+      object = (JSONObject) parser.parse(raw);
+    } catch (ParseException | FileNotFoundException e) {
+      e.printStackTrace();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+
+
+    for(JSONObject obj : object.get("transactions")){
+      
+    }
 
   }
 

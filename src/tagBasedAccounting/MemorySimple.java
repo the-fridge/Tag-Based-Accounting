@@ -20,6 +20,10 @@ class MemorySimple implements Memory{
   private List<Transaction> transactions;
   private Map<TagType, List<Tag>> tags;
 
+  private void loadData(){
+
+  }
+
   private void saveData(){
 
     JSONArray tags = new JSONArray();

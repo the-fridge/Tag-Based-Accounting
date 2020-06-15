@@ -21,25 +21,28 @@ class MemorySimple implements Memory{
   private Map<TagType, List<Tag>> tags;
 
   private void loadData(){
+    
 
   }
 
   private void saveData(){
 
-    JSONArray tags = new JSONArray();
+    JSONObject tagContainer = new JSONObject();
     for(TagType type : this.tags.keySet()){
+      JSONArray tags = new JSONArray();
       for(Tag tag : this.tags.get(type)){
-        tag.asJSONifyable().toJSONObject();
+        tags.add(tag.asJSONifyable().toJSONObject());
       }
+      tagContainer.put(type, tags);
     }
 
     JSONArray transactions = new JSONArray();
     for(Transaction transaction : this.transactions){
-      transaction.asJSONifyable().toJSONObject();
+      transactions.add(transaction.asJSONifyable().toJSONObject());
     }
 
     JSONObject object = new JSONObject();
-    object.put("tags", tags);
+    object.put("tags", tagContainer);
     object.put("transactions", transactions);
 
     File file = new File(dataLocation + dataFileName);

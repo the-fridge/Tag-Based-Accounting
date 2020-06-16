@@ -64,6 +64,10 @@ class MemorySimple implements Memory {
       tags.put(type, tagList);
     }
 
+    // finalizing -> replacing Dummies with correct Objects
+    Map<Long, Tag> tagIndex = new HashMap<>();
+    Map<Long, Transaction> transactionIndex = new HashMap<>();
+
   }
 
   private void saveData() {

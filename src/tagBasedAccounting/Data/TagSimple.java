@@ -31,6 +31,21 @@ class TagSimple implements Tag, JSONifyable {
   }
 
   @Override
+  public long id() {
+    return id;
+  }
+
+  @Override
+  public List<Tag> leaders() {
+    return leaders;
+  }
+
+  @Override
+  public void setLeaders(List<Tag> leaders) {
+    this.leaders = leaders;
+  }
+
+  @Override
   public JSONifyable asJSONifyable() {
     return this;
   }

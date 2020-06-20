@@ -1,5 +1,7 @@
 package tagBasedAccounting.Data;
 
+import java.util.List;
+
 public class DummyTag implements Tag{
 
   private long id;
@@ -9,8 +11,19 @@ public class DummyTag implements Tag{
   }
   private DummyTag(){}
 
-  public long getId() {
+  @Override
+  public long id() {
     return id;
+  }
+
+  @Override
+  public List<Tag> leaders() {
+    throw new NullPointerException();
+  }
+
+  @Override
+  public void setLeaders(List<Tag> leaders) {
+    throw new NullPointerException();
   }
 
   @Override

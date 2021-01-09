@@ -1,6 +1,6 @@
 package tagBasedAccounting.Data;
 
-import org.json.simple.JSONObject;
+//import org.json.simple.JSONObject;
 
 import java.util.Date;
 import java.util.List;
@@ -15,7 +15,7 @@ class TagSimple implements Tag, JSONifyable {
   private List<Tag> leaders;
   private List<Tag> subordinates;
 
-  @Override
+  /*@Override
   public JSONObject toJSONObject() {
     JSONObject object = new JSONObject();
 
@@ -28,7 +28,7 @@ class TagSimple implements Tag, JSONifyable {
     object.put("tagSubordinates", subordinates);
 
     return object;
-  }
+  }*/
 
   @Override
   public long id() {
@@ -44,9 +44,9 @@ class TagSimple implements Tag, JSONifyable {
   public void setLeaders(List<Tag> leaders) {
     this.leaders = leaders;
   }
-
+/*
   @Override
   public JSONifyable asJSONifyable() {
     return this;
-  }
+  }*/
 }

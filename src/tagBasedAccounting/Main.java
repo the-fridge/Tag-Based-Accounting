@@ -1,5 +1,9 @@
 package tagBasedAccounting;
 
+import tagBasedAccounting.Data.Memory;
+import tagBasedAccounting.Logic.Analyzer;
+import tagBasedAccounting.Logic.Bookkeeper;
+
 import java.util.Scanner;
 
 public class Main {

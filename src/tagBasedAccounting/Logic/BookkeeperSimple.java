@@ -1,6 +1,6 @@
-package tagBasedAccounting;
+package tagBasedAccounting.Logic;
 
-class BookkeeperSimple implements Bookkeeper{
+public class BookkeeperSimple implements Bookkeeper{
 
   @Override
   public void createTransaction() {

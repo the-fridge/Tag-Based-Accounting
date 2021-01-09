@@ -1,9 +1,9 @@
-package tagBasedAccounting;
+package tagBasedAccounting.Data;
 
-import org.json.simple.JSONArray;
+/*import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+import org.json.simple.parser.ParseException;*/
 import tagBasedAccounting.Data.Factory;
 import tagBasedAccounting.Data.Tag;
 import tagBasedAccounting.Data.TagType;
@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-class MemorySimple implements Memory {
+public class MemorySimple implements Memory {
 
   private static String dataLocation = "./";
   private static String dataFileName = "data.json";
@@ -26,9 +26,9 @@ class MemorySimple implements Memory {
   public MemorySimple(){
     transactions = new ArrayList<>();
     tags = new HashMap<>();
-    loadData();
+    //loadData();
   }
-
+/*
   private void loadData() {
 
     JSONObject object = new JSONObject();
@@ -99,7 +99,7 @@ class MemorySimple implements Memory {
       e.printStackTrace();
     }
 
-  }
+  }*/
 
   @Override
   public void getData() {

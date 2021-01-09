@@ -26,8 +26,8 @@ public class DummyTag implements Tag{
     throw new NullPointerException();
   }
 
-  @Override
+ /* @Override
   public JSONifyable asJSONifyable() {
     throw new NullPointerException();
-  }
+  }*/
 }

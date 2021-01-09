@@ -1,4 +1,4 @@
-package tagBasedAccounting;
+package tagBasedAccounting.Logic;
 
 public interface Analyzer {
 

@@ -10,8 +10,8 @@ public class DummyTransaction implements Transaction {
 
   private DummyTransaction(){}
 
-  @Override
+ /* @Override
   public JSONifyable asJSONifyable() {
     throw new NullPointerException();
-  }
+  }*/
 }

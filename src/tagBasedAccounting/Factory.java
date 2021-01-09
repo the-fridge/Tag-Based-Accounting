@@ -1,5 +1,12 @@
 package tagBasedAccounting;
 
+import tagBasedAccounting.Data.Memory;
+import tagBasedAccounting.Data.MemorySimple;
+import tagBasedAccounting.Logic.Analyzer;
+import tagBasedAccounting.Logic.AnalyzerSimple;
+import tagBasedAccounting.Logic.Bookkeeper;
+import tagBasedAccounting.Logic.BookkeeperSimple;
+
 public class Factory {
 
     public static Memory memory(){

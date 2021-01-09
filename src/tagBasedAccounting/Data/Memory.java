@@ -1,4 +1,4 @@
-package tagBasedAccounting;
+package tagBasedAccounting.Data;
 
 public interface Memory {
 

@@ -10,5 +10,4 @@ public interface Tag {
 
   void setLeaders(List<Tag> leaders);
 
-  public JSONifyable asJSONifyable();
 }
